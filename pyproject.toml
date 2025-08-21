@@ -1,0 +1,42 @@
+[tool.mypy]
+python_version = "3.11"
+files = ["src", "tests"]
+strict = true
+warn_unused_configs = true
+warn_unused_ignores = true
+
+# 3rd-party imports: let mypy skip missing stubs cleanly (we also install them in the hook env)
+[[tool.mypy.overrides]]
+module = [
+  "pytest",
+  "typer",
+  "rich",
+  "rich.*",
+  "pdfplumber",
+  "loguru",
+  "dotenv",
+  "pydantic",
+]
+ignore_missing_imports = true
+
+# Tests: don’t enforce decorator typing or typed defs
+[[tool.mypy.overrides]]
+files = ["tests/**/*.py"]
+disallow_untyped_decorators = false
+disallow_untyped_defs = false
+
+# Typer CLI: decorators are untyped, that’s normal
+[[tool.mypy.overrides]]
+module = ["pdf_extractor.cli"]
+disallow_untyped_decorators = false
+
+[tool.black]
+line-length = 88
+target-version = ["py311"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+
+[tool.ruff.format]
+docstring-code-format = true

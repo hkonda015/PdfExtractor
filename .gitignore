@@ -1,0 +1,24 @@
+# Python artifacts
+__pycache__/
+*.pyc
+
+# Tool caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual env
+.venv/
+
+# Build
+build/
+dist/
+*.egg-info/
+
+# Data & logs (keep these local)
+data/
+logs/
+
+# OS/editor
+.DS_Store
+Thumbs.db

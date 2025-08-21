@@ -1,0 +1,6 @@
+# Normalize to LF in the repo; Git converts in working tree only if you ask.
+* text=auto eol=lf
+
+# (Optional) If you truly need CRLF for Windows-only scripts, uncomment:
+# *.bat text eol=crlf
+# *.ps1 text eol=crlf
