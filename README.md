@@ -1,5 +1,7 @@
 # PDF Extractor (CLI)
 
+
+
 Extract **text from PDFs** and write `.txt` files to an output folder.
 Small, reliable, and Windows-friendly — with strict typing, linting, and pre-commit hooks.
 
